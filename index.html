@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div id="container">
@@ -25,15 +26,26 @@
         </div>
         <div id="header">
             <div id="profile-top">
-                <img>
-                <h4>Mark Lewis</h4>
+                <div id="search-bar">
+                    <i class="fa-solid fa-magnifying-glass fa-lg" style="color: var(--black)"></i>
+                    <input type="text">
+                </div>
+                <div id="profile-settings">
+                    <i class="fa-regular fa-bell fa-lg" style="color: var(--black);"></i>
+                    <img src="images/header-profile-img.png" alt="">
+                    <h4>Mark Lewis</h4>
+                </div>
             </div>
             <div id="profile-bottom">
-                <img src="" alt="">
+                <div id="welcome-message">
+                <img src="images/header-profile-img.png" alt="">
                 <h2><span>Hi there,</span><br>Mark (@mkling-coding)</h2>
-                <button>New</button>
-                <button>Upload</button>
-                <button>Share</button>
+                </div>
+                <div id="header-buttons">
+                    <button>New</button>
+                    <button>Upload</button>
+                    <button>Share</button>
+                </div>
             </div>
         </div>
         <div id="main">
