@@ -13,8 +13,9 @@
 
 #container {
     display: grid;
-    grid-template-columns: minmax(100px, 15%) minmax(200px, 85%);
-    grid-template-rows: 16% 84%;
+    grid-template-columns: 15fr 85fr;
+    grid-template-rows: 200px auto;
+    align-items: stretch;
 }
 
 #sidebar {
@@ -40,13 +41,22 @@
     padding-bottom: 10px;
 }
 
+#sidebar a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+#sidebar a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 #header {
     background-color: var(--white);
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
     display: flex;
     flex-wrap: wrap;
-    border-bottom: 2px solid black;
 }
 
 #profile-top {
@@ -124,10 +134,108 @@
     font-size: 16px;
 }
 
+#header-buttons button:hover {
+    cursor: pointer;
+}
+
 #main {
     background-color: var(--grey);
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
     display: grid;
-    grid-template-columns: 75% 25%;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    padding: 0px 30px 30px 30px;
+}
+
+#projects {
+    grid-row: 1 / span 2;
+}
+
+#projects h3 {
+    padding-top: 20px;
+}
+
+#project-grid {
+    display: grid;
+    height: 95%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-row: 1 / span 2;
+    gap: 15px;
+    padding: 15px 15px 0px 0px;
+    grid-auto-rows: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.project {
+    background-color: var(--white);
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.project-icons {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 30px;
+    width: 100%;
+}
+
+.project-icons i {
+    padding-left: 10px;
+}
+
+#announcements {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+}
+
+#announcements h3 {
+    padding: 20px 0px 15px 0px;
+}
+
+#announcements h4 {
+    padding-top: 10px;
+}
+
+#announcements p {
+    padding-bottom: 10px;
+}
+
+#announcement-blocks {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--white);
+}
+
+#trending {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+}
+
+#trending h3 {
+    padding: 20px 0px 15px 0px;
+}
+
+#trending-profiles {
+    background-color: var(--white);
+    border-radius: 10px;
+    height: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.trending-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trending-profile img {
+    width: 50px;
+    margin-right: 10px;
 }
